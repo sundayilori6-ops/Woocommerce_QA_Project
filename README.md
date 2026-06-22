@@ -66,7 +66,6 @@ UI/UX issues discovered during exploratory testing were logged in the bug report
 
 | File path | Description |
 |-----------|-------------|
-| README.md | Project overview, live demo link, scope, results summary, repository structure and notes about the demo environment. |
 | Test-Plan/WooCommerce_Test_Plan.docx | Test strategy and plan: scope, milestones, entry/exit criteria, risk assessment, and defect classification. |
 | Test-Cases/M1_Authentication_Test_Cases.csv | Authentication test cases (24). |
 | Test-Cases/M2_Product_Catalog_Test_Cases.csv | Product catalog test cases (23). |
