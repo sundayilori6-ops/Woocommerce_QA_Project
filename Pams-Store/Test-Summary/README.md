@@ -6,7 +6,7 @@ QA Testing Cycle  |  June 2026
 
 ## 1. Overview
 
-This report summarizes the QA testing cycle carried out on the Pams-Store WooCommerce demo site. Testing covered six functional milestones — Authentication, Product Catalog, Search & Filtering, Shopping Cart, Checkout, and Order Management — through a combination of structured test case execution and exploratory testing. A total of 147 test cases were executed and 12 defects were logged and documented in the accompanying bug report.
+This report summarizes the QA testing cycle carried out on the Pams-Store WooCommerce demo site. Testing covered six functional milestones — Authentication, Product Catalog, Search & Filtering, Shopping Cart, Checkout, and Order Management — through a combination of structured test case execution and exploratory testing. A total of 156 test cases were executed and 12 defects were logged and documented in the accompanying bug report.
 
 ## 2. Scope
 
@@ -20,14 +20,15 @@ This report summarizes the QA testing cycle carried out on the Pams-Store WooCom
 
 ## 3. Test Execution Summary
 
-Milestone	Name	Total TC	Pass	Fail	Skipped	Pass Rate
-M1	Authentication	24	22	1	1	92%
-M2	Product Catalog	23	21	2	0	91%
-M3	Search & Filtering	18	18	0	0	100%
-M4	Shopping Cart	25	24	1	0	96%
-M5	Checkout	38	36	2	0	95%
-M6	Order Management	28	28	0	0	100%
-Total		156	149	6	1	96%
+| Milestone | Name | Total TC | Pass | Fail | Skipped | Pass Rate |
+|---|---:|---:|---:|---:|---:|---:|
+| M1 | Authentication | 24 | 22 | 1 | 1 | 92% |
+| M2 | Product Catalog | 23 | 21 | 2 | 0 | 91% |
+| M3 | Search & Filtering | 18 | 18 | 0 | 0 | 100% |
+| M4 | Shopping Cart | 25 | 24 | 1 | 0 | 96% |
+| M5 | Checkout | 38 | 36 | 2 | 0 | 95% |
+| M6 | Order Management | 28 | 28 | 0 | 0 | 100% |
+| **Total** |  | **156** | **149** | **6** | **1** | **96%** |
 
 Across all six milestones, 156 test cases were executed with an overall pass rate of 96%. 6 test cases failed and were traced to genuine defects, and 1 test case was skipped after re-evaluation determined it did not represent a valid failure.
 
@@ -35,11 +36,12 @@ Across all six milestones, 156 test cases were executed with an overall pass rat
 
 A total of 12 defects were identified during testing and are documented in full in the accompanying Bug Report. Defects span functional, UI, data validation, and content categories.
 
-Severity	Count	Bug IDs
-Critical	1	BUG-002 (Logo Collection — no Add to Cart)
-High	1	BUG-011 (Quantity field — no upper limit)
-Medium	5	BUG-001, BUG-003, BUG-007, BUG-009, BUG-010
-Low	4	BUG-004, BUG-005, BUG-006, BUG-012
+| Severity | Count | Bug IDs |
+|---|---:|---|
+| Critical | 1 | BUG-002 (Logo Collection — no Add to Cart) |
+| High | 1 | BUG-011 (Quantity field — no upper limit) |
+| Medium | 5 | BUG-001, BUG-003, BUG-007, BUG-009, BUG-010 |
+| Low | 4 | BUG-004, BUG-005, BUG-006, BUG-012 |
 
 ### 4.1 Notable Defects
 - BUG-002 (Critical) — The Logo Collection grouped product page has no Add to Cart button, making the product entirely unpurchasable.
