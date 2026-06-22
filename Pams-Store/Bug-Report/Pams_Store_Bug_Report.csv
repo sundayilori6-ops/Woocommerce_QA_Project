@@ -9,13 +9,13 @@ Environment: WooCommerce Demo Site (staging)
 URL: https://pams-store.42web.io
 OS: Windows","1. Navigate to the Logo Collection product page
 2. Set a quantity for any sub-product row (e.g. T-Shirt: 1)
-3. Look for the add to cart button","An Add to Cart button should be present below the grouped product table to add selected items to the cart.","No Add to Cart button exists on the page. Selected quantities cannot be added to the cart.",,,,
+3. Look for the add to cart button","An Add to Cart button should be present below the grouped product table to add selected items to the cart.","No Add to Cart button exists on the page. Selected quantities cannot be added to the cart.",,,, 
 BUG-003,"Cart page >> Setting quantity field to 0 does not remove the product or show a validation message",FE,"Browser: Google Chrome
 Environment: WooCommerce Demo Site (staging)
 URL: https://pams-store.42web.io
 OS: Windows","1. Add a product to the cart
 2. On the cart page, clear the quantity field and enter 0
-3. Press Tab or click outside the field","Product should be removed from the cart, or a validation message should be displayed.","Product remains in the cart with the original quantity unchanged.",Medium,,,,
+3. Press Tab or click outside the field","Product should be removed from the cart, or a validation message should be displayed.","Product remains in the cart with the original quantity unchanged.",Medium,,, 
 BUG-004,"Checkout page >> Country dropdown reverts to an earlier selected value instead of the last one after page reload",FE,"Browser: Google Chrome
 Environment: WooCommerce Demo Site (staging)
 URL: https://pams-store.42web.io
