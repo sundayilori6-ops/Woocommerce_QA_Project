@@ -1,2 +1,49 @@
-Test Case ID,Title,Description,Steps,Expected Result,Priority,Status
-SRCH-001,Search returns relevant results,"Search for a product by name","1. Enter product name in search\n2. Submit search","Relevant products shown in results",Medium,Not Executed
+TC ID,Features,Title,Preconditions,Test Steps,Test Data,Expected Result,Actual Result,Priority,Status
+TC-01,Search,Verify search bar is visible and accessible on the shop page,User is on the shop page,1. Observe the top right of the page,N/A,"Search bar is visible at the top right of the page with a magnifying glass icon and placeholder text ""Search products""",Search bar is visible and accessible on the shop page with appropriate search controls and placeholder text.,Medium,Pass
+TC-02,Search,Verify search bar is highlighted when clicked,User is on the shop page,"1. Click on the search bar
+2. Observe the search bar border",N/A,"Search bar is highlighted with a purple border when clicked indicating it is active",Search bar received visual focus when clicked and was ready for user input.,Low,Pass
+TC-03,Search,Verify searching for a valid product name returns the correct product,User is on the shop page,"1. Click on the search bar
+2. Type a valid product name
+3. Press Enter",Search keyword: Existing product name,Search returns the product matching the entered search term.,Search returns the product matching the entered search term.,High,Pass
+TC-04,Search,Verify searching for a product using lowercase letters returns the correct result,User is on the shop page,"1. Click on the search bar
+2. Type a valid product name in all lowercase
+3. Press Enter",Search keyword: Existing product name (lowercase),Correct product is returned. Search is not case sensitive,Correct product is returned. Search is not case sensitive,Medium,Pass
+TC-05,Search,Verify searching for a product using uppercase letters returns the correct result,User is on the shop page,"1. Click on the search bar
+2. Type a valid product name in all uppercase
+3. Press Enter",Search keyword: Existing product name (uppercase),Correct product is returned. Search is not case sensitive,Correct product is returned. Search is not case sensitive,Medium,Pass
+TC-06,Search,Verify searching for a partial product name returns the correct result,User is on the shop page,"1. Click on the search bar
+2. Type a partial product name
+3. Press Enter",Search keyword: Partial product keyword,Products matching the partial search term are returned.,Products matching the partial search term are returned.,Medium,Pass
+TC-07,Search,Verify searching for a keyword that does not match any product shows a no results message,User is on the shop page,"1. Click on the search bar
+2. Type a keyword that does not match any product
+3. Press Enter",Search keyword: Invalid product name,Search results page is displayed and indicates that no matching products were found.,"Search results page is displayed and indicates that no matching products were found.",High,Pass
+TC-08,Search,Verify submitting an empty search does not return any results,User is on the shop page,"1. Click on the search bar
+2. Leave the search field empty
+3. Press Enter","Search keyword: (blank)",User remains on the shop page with all products displayed,User remains on the shop page with all products displayed,High,Pass
+TC-09,Search,Verify searching for a product using special characters does not break the page,User is on the shop page,"1. Click on the search bar
+2. Type special characters in the search bar
+3. Press Enter","Search keyword: @#$%!",Page does not crash. the page handles the input gracefully,Page does not crash. the page handles the input gracefully,Medium,Pass
+TC-10,Search,Verify searching for a product using numbers does not break the page,User is on the shop page,"1. Click on the search bar
+2. Type numbers in the search bar
+3. Press Enter",Search keyword: 12345,"Page does not crash. No results message is displayed: No products were found matching your selection.","Page does not crash. No results message is displayed: No products were found matching your selection.",Low,Pass
+TC-11,Sorting,Verify that the sorting dropdown is visible on the shop page,User is on the shop page,1. Observe the sorting dropdown at the top left of the product listing,N/A,Sorting dropdown is visible and displays default sorting option,Sorting dropdown is visible and displays a default sorting option.,Medium,Pass
+TC-12,Sorting,Verify that the sorting dropdown displays all available sorting options,User is on the shop page,"1. Click the sorting dropdown
+2. Observe all available options",N/A,Dropdown displays all configured sorting options.,Dropdown displays all configured sorting options.,Medium,Pass
+TC-13,Sorting,Verify selecting Sort by price low to high reorders products from lowest to highest price,User is on the shop page,"1. Click the sorting dropdown
+2. Select Sort by price: low to high
+3. Observe the product order",N/A,"Products are reordered from lowest to highest price. The cheapest product appears first","Products are reordered from lowest to highest price. The cheapest product appears first",High,Pass
+TC-14,Sorting,Verify selecting Sort by price high to low reorders products from highest to lowest price,User is on the shop page,"1. Click the sorting dropdown
+2. Select Sort by price: high to low
+3. Observe the product order",N/A,"Products are reordered from highest to lowest price. The most expensive product appears first","Products are reordered from highest to lowest price. The most expensive product appears first",High,Pass
+TC-15,Sorting,Verify selecting Sort by latest reorders products by newest first,User is on the shop page,"1. Click the sorting dropdown
+2. Select Sort by latest
+3. Observe the product order",N/A,"Products are reordered with the most recently added product appearing first","Products are reordered with the most recently added product appearing first",Medium,Pass
+TC-16,Sorting,Verify selecting Sort by popularity reorders products by popularity,User is on the shop page,"1. Click the sorting dropdown
+2. Select Sort by popularity
+3. Observe the product order",N/A,"Products are reordered based on popularity. No error occurs and the page reloads with updated order","Products are reordered based on popularity. No error occurs and the page reloads with updated order",Medium,Pass
+TC-17,Sorting,Verify selecting Sort by average rating reorders products by rating,User is on the shop page,"1. Click the sorting dropdown
+2. Select Sort by average rating
+3. Observe the product order",N/A,"Products are reordered based on average rating. No error occurs and the page reloads with updated order","Products are reordered based on average rating. No error occurs and the page reloads with updated order",Medium,Pass
+TC-18,Sorting,Verify selecting Default sorting resets the product order back to default,User is on the shop page with a sorting option already applied,"1. Select any sorting option from the dropdown
+2. Then select Default sorting
+3. Observe the product order",N/A,Products return to the original default order,Products return to the original default order,Medium,Pass

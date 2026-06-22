@@ -1,2 +1,112 @@
-Test Case ID,Title,Description,Steps,Expected Result,Priority,Status
-AUTH-001,Login with valid credentials,"User logs in with valid email and password","1. Go to login page\n2. Enter valid credentials\n3. Click Login","User is logged in and redirected to dashboard",High,Not Executed
+TC ID,Features,Title,Preconditions,Test Steps,Test Data,Expected Result,Actual Result,Priority,Status
+TC-01,Registration,Verify user can successfully register with a valid email and password,"User is on my account page. No existing account for the email.","1. Navigate to my account page
+2. Under Register enter a valid email address
+3. Enter a valid password
+4. Click Register","Email: newuser@test.com
+Password: Test@1234",Account is created. User is redirected to the My Account dashboard.,User account is created and redirected to account dashboard,High,Pass
+TC-02,Registration,Verify registration is blocked when using an already registered email,An account already exists with the email being used.,"1. Navigate to my account page
+2. Under Register enter an email already linked to an existing account
+3. Enter any password
+4. Click Register","Email: existinguser@test.com
+Password: Test@1234","Error message displayed: An account is already registered with your email address.","User account is not created, error message appear telling user: An account is already. Please log in or use a different email address",High,Pass
+TC-03,Registration,Verify registration fails when the email field is left empty,User is on my account page.,"1. Navigate to my account page
+2. Leave the email field blank
+3. Enter a password
+4. Click Register","Email: (blank)
+Password: Test@1234",Validation error displayed on the email field. Registration does not proceed.,"User account is not created, An error message appears telling user: Please user fill out this field",Medium,Pass
+TC-04,Registration,Verify registration fails when the password field is left empty,User is on my account page.,"1. Navigate to my account page
+2. Enter a valid email address
+3. Leave the password field blank
+4. Click Register","Email: newuser2@test.com
+Password: (blank)",Validation error displayed on the password field. Registration does not proceed.,"User account is not created, An error message appears telling user: Please user fill out this field",Medium,Pass
+TC-05,Registration,Verify registration fails when an invalid email format is entered,User is on my account page.,"1. Navigate to my account page
+2. Enter a malformed email address
+3. Enter a valid password
+4. Click Register","Email: invalidemail@gnam
+Password: Test@1234",Validation error displayed. Error indicates the email address is invalid.,"User account is not created, An error message appears telling user: Please provide a valid email address",Medium,Pass
+TC-06,Registration,Verify password visibility toggle works on the register form,User is on my account page.,"1. Navigate to my account page
+2. Enter any text in the Password field under Register
+3. Click the eye icon",Password: Test@1234,Password text toggles between hidden (dots) and visible.,The password toggles when it is clicked,Low,Pass
+TC-07,Registration,Verify registration fails when the password field contains only whitespace,User is on my account page.,"1. Navigate to my account page
+2. Enter a valid email address
+3. Enter only spaces in the password field
+4. Click Register","Email: newuser@test.com
+Password: Whitespace only (5 spaces)","Registration fails. Validation error is displayed informing the user the password is invalid. Account is not created.","Registration was blocked. Account is not created, An error message appears telling user: Weak - Please enter a stronger password.",High,Pass
+TC-08,Registration,Verify registration fails when an extremely long email address is entered,User is on my account page.,"1. Navigate to my account page
+2. Enter an email address exceeding 254 characters
+3. Enter a valid password
+4. Click Register","Email: aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa@test.com
+Password: Test@1234","Registration fails. Validation error is displayed informing the user the email address is too long. Account is not created.","User account is not created, An error message appears telling user: username may be longer than 60 characters",Medium,Failed
+TC-09,Registration,Verify registration succeeds with special characters in password,"User is on my account page. No existing account for the email.","1. Navigate to my account page
+2. Enter a valid email address
+3. Enter a password containing special characters
+4. Click Register","Email: specialuser@test.com
+Password: T@#$%^&*()!1",Registration is successful. Account is created and user is redirected to the My Account dashboard.,User account is created and redirected to account dashboard,Medium,Pass
+TC-10,Login,Verify user can successfully log in with a valid email and password,A registered email exists.,"1. Navigate to my account page
+2. Under Login enter a valid email
+3. Enter the correct password
+4. Click Log in","Username: newuser@test.com
+Password: Test@1234",User is logged in and redirected to the My Account dashboard.,User is logged in and redirected to account dashboard,High,Pass
+TC-11,Login,Verify user can log in using their username instead of email,A registered account exists with a username.,"1. Navigate to my account page
+2. Enter the registered username (not email) in the username field
+3. Enter the correct password
+4. Click Log in","Username: testuser
+Password: Test@1234",User is logged in and redirected to the My Account dashboard.,User is logged in and redirected to account dashboard,Medium,Pass
+TC-12,Login,Verify login fails when password contains only whitespace,User is on my account page.,"1. Navigate to my account page
+2. Enter a valid username or email
+3. Enter only spaces in the password field
+4. Click Log in","Username: newuser@test.com
+Password: ""     """,Error message displayed: The password field is empty,"User is not logged in. An error message appears telling the user: The password field is empty",Medium,Pass
+TC-13,Login,Verify login fails when an incorrect password is entered,A registered account exists.,"1. Navigate to my account page
+2. Enter a valid username or email
+3. Enter an incorrect password
+4. Click Log in","Username: newuser@test.com
+Password: WrongPass99","Error message displayed: The password you entered for the email address is incorrect.","Login fails, An error message is returned telling the user: The password you entered for the email address is incorrect",High,Pass
+TC-14,Login,Verify login fails when an unregistered email is entered,No account exists for the email being used.,"1. Navigate to my account page
+2. Enter an email not linked to any account
+3. Enter any password
+4. Click Log in","Username: nobody@test.com
+Password: Test@1234",Error message displayed indicating no account found for that email.,"Login fails, An error message is returned telling the user: Unknown email address. Check again or try your username",High,Pass
+TC-15,Login,Verify login fails when the username field is left empty,User is on my account page.,"1. Navigate to my account page
+2. Leave the username field blank
+3. Enter a password
+4. Click Log in","Username: (blank)
+Password: Test@1234",Validation error displayed on the username field. Login does not proceed.,"Login fails, An error message appears telling the user: username is required",Medium,Pass
+TC-16,Login,Verify login fails when the password field is left empty,User is on my account page.,"1. Navigate to my account page
+2. Enter a valid username or email
+3. Leave the password field blank
+4. Click Log in","Username: newuser@test.com
+Password: (blank)",Validation error displayed on the password field. Login does not proceed.,"Login fails, An error message appears telling the user: Password field is empty",Medium,Pass
+TC-17,Login,Verify Remember me option keeps the user logged in after browser restart,A registered account exists.,"1. Navigate to my account page
+2. Enter valid credentials
+3. Check the Remember me checkbox
+4. Click Log in
+5. Close the browser completely
+6. Reopen the browser
+7. Navigate back to my account page
+8. Observe whether the user is still logged in","Username: newuser@test.com
+Password: Test@1234",User remains logged in after reopening the browser.,"User remains logged in after reopening the browser. User is taken directly to the My Account dashboard without being prompted to log in again",Low,Pass
+TC-18,Login,Verify that the password visibility toggle works on the login form,User is on my account page.,"1. Navigate to my account page
+2. Enter any text in the Password field under Login
+3. Click the eye icon",Password: Test@1234,Password text toggles between hidden (dots) and visible.,Password visibility successfully toggles between masked and visible states when the eye icon is clicked.,Low,Pass
+TC-19,Login,Verify that user can log in with a password containing special characters,A registered account exists with a password containing special characters.,"1. Navigate to my account page
+2. Enter a valid email
+3. Enter the correct password containing special characters
+4. Click Log in","Username: newuser@test.com
+Password: T@#$%^&*()!1",Login is successful. User is redirected to the My Account dashboard.,User is logged in and redirected to account dashboard,Medium,Pass
+TC-20,Login,Verify login form safely handles SQL injection attempts,User is on my account page.,"1. Navigate to my account page
+2. Enter a SQL injection string in the username field
+3. Enter a SQL injection string in the password field
+4. Click Log in","Email: ' OR '1'='1
+Password: ' OR '1'='1","Login fails. No database error or unauthorized access occurs. System handles the input safely and displays a normal error message.","User is not logged in. An error message appears telling the user: The username or is not registered on this site. If you are unsure of your username, try your email address instead",High,Pass
+TC-21,Logout,Verify logged in user can successfully log out,User is logged in.,"1. Navigate to My Account dashboard
+2. Click Log out from the account menu",N/A,User is logged out and redirected to the my-account page.,User is logged out successfully,High,Pass
+TC-22,Password Reset,Verify password reset email is sent for a valid registered email,A registered account exists.,"1. Navigate to my account page
+2. Click Lost your password?
+3. Enter a registered email address
+4. Click Reset Password",Email: newuser@test.com,"Confirmation message shown: Password reset email has been sent. Email received in inbox.",Confirmation message displayed on screen but no email received in inbox,High,Block/Skip
+TC-23,Password Reset,Verify error is shown when an unregistered email is used for password reset,User is on the Lost Password page.,"1. Navigate my account page
+2. Click on forgot password
+3. Enter an email not linked to any account
+4. Click Reset Password",Email: notregistered@test.com,Error message displayed indicating no account is associated with that email.,"Email resend link is not successful, An error appears telling: Invalid username or email",Medium,Pass
+TC-24,Session Management,Verify unauthenticated user is redirected when accessing a protected page,User is not logged in.,1. Navigate directly to my account page,N/A,User is redirected to my account page and cannot access the orders page.,User is redirected to my account page and cannot access the orders page.,High,Pass
