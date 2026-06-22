@@ -1,0 +1,2 @@
+Test Case ID,Title,Description,Steps,Expected Result,Priority,Status
+AUTH-001,Login with valid credentials,"User logs in with valid email and password","1. Go to login page\n2. Enter valid credentials\n3. Click Login","User is logged in and redirected to dashboard",High,Not Executed

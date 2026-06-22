@@ -1,0 +1,2 @@
+Bug ID,Title,Description,Steps to Reproduce,Expected,Actual,Severity,Status,Reported By,Date
+BUG-001,Checkout button disabled,"Checkout button remains disabled on checkout page","1. Add item to cart\n2. Proceed to checkout\n3. Observe checkout button","Checkout button enabled","Checkout button stays disabled",Critical,Open,qa_user,2026-06-22

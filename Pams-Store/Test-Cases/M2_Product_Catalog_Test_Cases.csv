@@ -1,0 +1,2 @@
+Test Case ID,Title,Description,Steps,Expected Result,Priority,Status
+PROD-001,View product details,"User views product detail page","1. Go to product listing\n2. Click a product","Product details are displayed with price and add to cart",High,Not Executed

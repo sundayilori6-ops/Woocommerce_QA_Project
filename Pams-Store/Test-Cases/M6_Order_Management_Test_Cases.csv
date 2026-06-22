@@ -1,0 +1,2 @@
+Test Case ID,Title,Description,Steps,Expected Result,Priority,Status
+ORD-001,View order history,"User views past orders","1. Login\n2. Navigate to Orders","List of past orders is displayed",Medium,Not Executed

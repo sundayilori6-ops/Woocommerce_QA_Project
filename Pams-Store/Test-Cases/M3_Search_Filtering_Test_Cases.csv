@@ -1,0 +1,2 @@
+Test Case ID,Title,Description,Steps,Expected Result,Priority,Status
+SRCH-001,Search returns relevant results,"Search for a product by name","1. Enter product name in search\n2. Submit search","Relevant products shown in results",Medium,Not Executed

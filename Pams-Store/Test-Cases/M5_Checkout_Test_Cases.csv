@@ -1,0 +1,2 @@
+Test Case ID,Title,Description,Steps,Expected Result,Priority,Status
+CHK-001,Complete checkout with valid payment,"User completes checkout using valid card","1. Add item to cart\n2. Proceed to checkout\n3. Enter valid payment details\n4. Place order","Order is placed and confirmation shown",High,Not Executed

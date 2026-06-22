@@ -1,0 +1,2 @@
+Test Case ID,Title,Description,Steps,Expected Result,Priority,Status
+CART-001,Add item to cart,"Add a product to shopping cart","1. Go to product page\n2. Click Add to Cart","Item appears in cart with correct quantity and price",High,Not Executed
