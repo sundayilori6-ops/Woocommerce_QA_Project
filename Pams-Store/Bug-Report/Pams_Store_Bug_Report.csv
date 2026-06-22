@@ -9,13 +9,13 @@ Environment: WooCommerce Demo Site (staging)
 URL: https://pams-store.42web.io
 OS: Windows","1. Navigate to the Logo Collection product page
 2. Set a quantity for any sub-product row (e.g. T-Shirt: 1)
-3. Look for the add to cart button","An Add to Cart button should be present below the grouped product table to add selected items to the cart.","No Add to Cart button exists on the page. Selected quantities cannot be added to the cart.",,, ,
+3. Look for the add to cart button","An Add to Cart button should be present below the grouped product table to add selected items to the cart.","No Add to Cart button exists on the page. Selected quantities cannot be added to the cart.",,,,
 BUG-003,"Cart page >> Setting quantity field to 0 does not remove the product or show a validation message",FE,"Browser: Google Chrome
 Environment: WooCommerce Demo Site (staging)
 URL: https://pams-store.42web.io
 OS: Windows","1. Add a product to the cart
 2. On the cart page, clear the quantity field and enter 0
-3. Press Tab or click outside the field","Product should be removed from the cart, or a validation message should be displayed.","Product remains in the cart with the original quantity unchanged.",Medium,,, 
+3. Press Tab or click outside the field","Product should be removed from the cart, or a validation message should be displayed.","Product remains in the cart with the original quantity unchanged.",Medium,,,,
 BUG-004,"Checkout page >> Country dropdown reverts to an earlier selected value instead of the last one after page reload",FE,"Browser: Google Chrome
 Environment: WooCommerce Demo Site (staging)
 URL: https://pams-store.42web.io
@@ -33,35 +33,35 @@ BUG-006,"Product listing page >> Add to cart and Select options buttons are not 
 Environment: WooCommerce Demo Site (staging)
 URL: https://pams-store.42web.io
 OS: Windows","1. Navigate to the shop page
-2. Compare button alignment across a row containing products with differing configurations (e.g. Album vs Beanie)","Action buttons should anchor to the bottom edge of each product card for a uniform grid appearance.","Action buttons are misaligned across product cards; some cards show the buttons higher or lower than others, causing inconsistent layout.",,, 
+2. Compare button alignment across a row containing products with differing configurations (e.g. Album vs Beanie)","Action buttons should anchor to the bottom edge of each product card for a uniform grid appearance.","Action buttons are misaligned across product cards; some cards show the buttons higher or lower than others, causing inconsistent layout.",,,, 
 BUG-007,"Product detail page >> Irrelevant Logo Variation Dropdown Displayed on Hoodie Product Page",FE,"Browser: Google Chrome
 Environment: WooCommerce Demo Site (staging)
 URL: https://pams-store.42web.io
 OS: Windows","1. Navigate to the Hoodie product page.
 2. Observe the available product variations.
-3. Open the Logo dropdown.","The Logo dropdown should not be displayed when no logo customization choices are available.","A Logo variation dropdown is displayed even though the only available option is a single default value or no selectable logos.",,, 
+3. Open the Logo dropdown.","The Logo dropdown should not be displayed when no logo customization choices are available.","A Logo variation dropdown is displayed even though the only available option is a single default value or no selectable logos.",,,, 
 BUG-008,"Product detail page >> The V-Neck T-Shirt gallery thumbnails fail to load and show broken images",FE,"Browser: Google Chrome
 Environment: WooCommerce Demo Site (staging)
 URL: https://pams-store.42web.io
 OS: Windows","1. Navigate to the V-Neck T-Shirt product page
-2. Observe the gallery thumbnails below the main product image","All gallery thumbnails should load and display the correct product images.","The thumbnails display as broken image icons with raw alt text shown; images fail to load.",,, 
+2. Observe the gallery thumbnails below the main product image","All gallery thumbnails should load and display the correct product images.","The thumbnails display as broken image icons with raw alt text shown; images fail to load.",,,, 
 BUG-009,"Register form >> Email field shows incorrect error message referencing ""username"" instead of ""email"" when character limit is exceeded",FE,"Browser: Google Chrome
 Environment: WooCommerce Demo Site (staging)
 URL: https://pams-store.42web.io
 OS: Windows","1. Navigate to /my-account/
 2. Enter an email address exceeding 60 characters in the Register form
-3. Submit the form","Error message should appears saying the Email address should not be longer than 60 characters.","Error message appears saying username may be longer than 60 characters.",Medium,Medium, ,
+3. Submit the form","Error message should appears saying the Email address should not be longer than 60 characters.","Error message appears saying username may be longer than 60 characters.",Medium,Medium,,
 BUG-010,"Register form >> Password strength meter incorrectly rates whitespace-only password as Medium strength",FE,"Browser: Google Chrome
 Environment: WooCommerce Demo Site (staging)
 URL: https://pams-store.42web.io
 OS: Windows","1. Navigate to /my-account/
-2. In the Register form, enter "" "" (quotation marks with white spaces) into the Password field","Password should be rejected or rated as Weak.","Password is accepted and rated as Medium strength despite containing only whitespace.",Medium,,, 
+2. In the Register form, enter "" "" (quotation marks with white spaces) into the Password field","Password should be rejected or rated as Weak.","Password is accepted and rated as Medium strength despite containing only whitespace.",Medium,,,,
 BUG-011,"Product detail page >> Quantity field does not block excessively large numbers like 9999999999",FE,"Browser: Google Chrome
 Environment: WooCommerce Demo Site (staging)
 URL: https://pams-store.42web.io
 OS: Windows","1. Navigate to a product page (e.g. Beanie with Logo)
 2. Enter 9999999999 into the quantity field
-3. Click Add to Cart","System should validate input against stock levels or a sensible maximum (e.g. 99) and reject or cap values exceeding it.","System accepts the value without validation, producing an incorrect or unexpected order quantity.",,, 
+3. Click Add to Cart","System should validate input against stock levels or a sensible maximum (e.g. 99) and reject or cap values exceeding it.","System accepts the value without validation, producing an incorrect or unexpected order quantity.",,,, 
 BUG-012,"Product detail page >> Description tab displays unrelated content",FE,"Browser: Google Chrome
 Environment: WooCommerce Demo Site (staging)
 URL: https://pams-store.42web.io
