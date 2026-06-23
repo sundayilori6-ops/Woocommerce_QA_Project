@@ -1,0 +1,65 @@
+"TC ID","Features","Title","Preconditions","Test Steps","Test Data","Expected Result","Actual Result","Priority","Status"
+"TC-01","Empty Cart","Verify empty cart page displays the correct message","User is on the cart page with no items in the cart","1. Observe the cart page content","N/A","Sad face icon is displayed. Message shows Your cart is currently empty!","Empty cart page displays the message Your cart is currently empty. along with a link to continue shopping.","Medium","Pass"
+"TC-02","Empty Cart","Verify cart icon shows zero items when the cart is empty","User has no items in the cart","1. Observe the cart icon at the top right of the page","N/A","Cart icon indicates that the cart is empty.","Cart icon displays 0 items when the cart is empty.","Medium","Pass"
+"TC-03","Add to Cart","Verify simple product can be added to the cart from the product detail page","User is on the simple product page","1. Click the Add to cart button
+2. Observe the cart icon at the top right","N/A","Product is added to the cart. Cart icon updates","Simple product is successfully added to the cart from the product detail page and a confirmation message is displayed.","High","Pass"
+"TC-04","Add to Cart","Verify simple product can be added to the cart from the shop page","User is on the shop page","1. Click the Add to cart button under a simple product such as T-Shirt
+2. Observe the cart icon at the top right","N/A","Product is added to the cart. Cart icon updates to reflect the added item","Simple product is successfully added to the cart from the shop page and cart count is updated.","High","Pass"
+"TC-05","Add to Cart","Verify adding a variable product to the cart displays the selected variant details","User is on the variable product page","1. Select a colour from the Color dropdown
+2. Select a size from the Size dropdown
+3. Click Add to cart
+4. Navigate to the cart page
+5. Observe the product details displayed","Color: any available option
+Size: any available option","Product is added to the cart. Cart displays the product name along with the selected colour and size variant details","Variable product is added to the cart with the selected color and size displayed in the cart.","High","Pass"
+"TC-06","Add to Cart","Verify multiple different products can be added to the cart","User is on the shop page","1. Add a Beanie with Logo to the cart
+2. Navigate back to the shop
+3. Add a T-Shirt to the cart
+4. Navigate to the cart page","N/A","All added products appear in the cart with correct details and quantities.","Multiple different products are successfully added to the cart and all items are displayed correctly.","High","Pass"
+"TC-07","Add to Cart","Verify sale product is added to the cart at the discounted price","User is on the simple product page","1. Click Add to cart
+2. Navigate to the cart page
+3. Observe the price displayed","N/A","Product is added using its configured discounted price and any applicable original price is displayed according to system design.","Sale product is added to the cart using the discounted sale price rather than the regular price.","High","Pass"
+"TC-08","Cart Display","Verify cart page displays all correct product details","User has added simple product to the cart","1. Navigate to the cart page
+2. Observe all product details displayed","N/A","Cart displays product image, product name as a clickable link, original and sale price, short description, quantity control and delete icon","Cart page displays correct product image, name, price, quantity, subtotal, and remove option for each item.","High","Pass"
+"TC-09","Cart Display","Verify cart totals section displays correctly","User has at least one item in the cart","1. Navigate to the cart page
+2. Observe the Cart Totals section on the right","N/A","Cart Totals section displays Add coupons dropdown, Free shipping and Estimated total matching the product total","Cart Totals section displays subtotal, shipping, and total amount correctly.","High","Pass"
+"TC-10","Cart Display","Verify breadcrumb on the cart page displays correctly","User is on the cart page","1. Observe the breadcrumb at the top of the cart page","N/A","Breadcrumb navigation is displayed correctly and links navigate to the corresponding pages.","Breadcrumb navigation is displayed correctly and links navigate to the corresponding pages.","Low","Pass"
+"TC-11","Cart Display","Verify cart items persist after the browser is refreshed","User has at least one item in the cart","1. Add a product to the cart
+2. Navigate to the cart page
+3. Note the items and quantities in the cart
+4. Refresh the browser
+5. Observe the cart","N/A","Cart items and quantities remain unchanged after the browser is refreshed","Cart contents remain intact after refreshing the browser page.","High","Pass"
+"TC-12","Quantity","Verify clicking the plus button increases the product quantity by one","User has simple product in the cart with one quantity","1. Click the plus (+) button on the quantity control
+2. Observe the quantity and total","N/A","Quantity increases the product in number","Clicking the plus (+) button increases the product quantity by one and updates the subtotal.","High","Pass"
+"TC-13","Quantity","Verify that clicking the minus button decreases the product quantity by one","User has simple product in the cart with two quantity","1. Click the minus button on the quantity control
+2. Observe the quantity and total","N/A","Quantity decreases the product in number","Clicking the minus (-) button decreases the product quantity by one and updates the subtotal.","High","Pass"
+"TC-14","Quantity","Verify updating the quantity to three updates the total correctly","User has simple product in the cart with one quantity","1. Click the plus (+) button twice to increase quantity to 3
+2. Observe the total and estimated total","N/A","Updating the quantity to three recalculates the subtotal and cart total correctly.","Updating the quantity to three recalculates the subtotal and cart total correctly.","High","Pass"
+"TC-15","Quantity","Verify minus button does not reduce quantity below one","User has simple product in the cart with one quantity","1. Click the minus button when quantity is already 1
+2. Observe the result","N/A","Quantity cannot be reduced below one using the minus (-) button.","Quantity cannot be reduced below one using the minus (-) button.","Medium","Pass"
+"TC-16","Quantity","Verify entering zero in the quantity field removes the product from the cart","User has at least one item in the cart","1. Click the quantity field
+2. Clear the value and type 0
+3. Press enter or click outside the field
+4. Observe the result","Quantity: 0","Product is removed from the cart","The product remains in the cart and the quantity of the product remains the same","Medium","Fail"
+"TC-17","Remove Item","Verify clicking the delete icon removes the product from the cart","User has simple product in the cart","1. Click the delete (bin) icon next to the product
+2. Observe the cart","N/A","Product is removed from the cart","Clicking the delete/remove icon successfully removes the product from the cart.","High","Pass"
+"TC-18","Remove Item","Verify cart icon updates correctly after a product is removed","User has one item in the cart","1. Click the delete (bin) icon next to the product
+2. Observe the cart icon at the top right","N/A","Cart icon count decreases appropriately after a product is removed from the cart.","Cart icon count decreases appropriately after a product is removed from the cart.","Medium","Pass"
+"TC-19","Coupon","Verify Add coupons section is expandable on the cart page","User has at least one item in the cart","1. Click the Add coupons dropdown on the Cart Totals section
+2. Observe the result","N/A","Add coupons section expands to reveal a coupon code input field","Add Coupon section expands successfully and displays the coupon code input field.","Medium","Pass"
+"TC-20","Coupon","Verify applying a valid coupon code updates the cart total","User has at least one item in the cart and a valid coupon code exists","1. Click the Add coupons dropdown
+2. Enter a valid coupon code
+3. Click Apply
+4. Observe the cart total","Coupon code: (gdhshsa)","Coupon is applied. Discount is reflected in the cart total. Estimated total updates accordingly","Valid coupon code is applied successfully and cart total is updated with the discount.","High","Pass"
+"TC-21","Coupon","Verify applying an invalid coupon code shows an error message","User has at least one item in the cart","1. Click the Add coupons dropdown
+2. Enter an invalid coupon code
+3. Click Apply
+4. Observe the result","Coupon code: INVALIDCODE","Error message is displayed indicating the coupon code is not valid","Invalid coupon code displays an appropriate error message and no discount is applied.","High","Pass"
+"TC-22","Free Shipping","Verify free shipping is displayed as FREE in the cart totals","User has at least one item in the cart","1. Navigate to the cart page
+2. Observe the shipping section in Cart Totals","N/A","Free shipping is displayed as FREE in the Cart Totals section","Free shipping is displayed as FREE in the Cart Totals section.","Medium","Pass"
+"TC-23","Checkout","Verify clicking Proceed to Checkout navigates to the checkout page","User has at least one item in the cart","1. Click the Proceed to Checkout button
+2. Observe the page that loads","N/A","User is navigated to the checkout page.","Clicking Proceed to Checkout navigates the user to the Checkout page successfully.","High","Pass"
+"TC-24","Checkout","Verify clicking the product name link in the cart navigates to the product detail page","User has at least one item in the cart","1. Click the product name link in the cart
+2. Observe the page that loads","N/A","User is navigated to the product detail page for that product","Clicking the product name link in the cart navigates to the corresponding product detail page.","Low","Pass"
+"TC-25","Checkout","Verify navigating to the checkout page with an empty cart does not allow checkout to proceed","User has no items in the cart","1. Ensure the cart is empty
+2. Navigate directly to checkout
+3. Observe the result","N/A","User is redirected away from the checkout page and returned back to cart","User cannot proceed with checkout when the cart is empty; an appropriate message is displayed.","High","Pass"
