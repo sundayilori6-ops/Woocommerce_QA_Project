@@ -92,7 +92,3 @@ UI/UX issues discovered during exploratory testing were logged in the bug report
 ## Notes
 
 This is a demo/training environment, not a production application. Some logged issues (for example, placeholder content and a broken external swag-store link) stem from WooCommerce demo sample data rather than site customizations. Use the live demo link above to reproduce test scenarios where applicable.
-
----
-
-If you'd like additional changes (for example: add a contributors section, link to individual test-case CSVs with sample rows, or export the repository tree as a file), tell me what to add and I will update the README accordingly.
